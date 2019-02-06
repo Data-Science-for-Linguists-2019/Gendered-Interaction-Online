@@ -31,11 +31,13 @@ Additionally, some files contain names of posters rather than their genders. Thi
 
 ### GENDER x GENDER linguistic analysis
 To start, I want to look at some simple linguistic analysis measures. First, I can examine language used by male vs. female, ignoring the poster vs. responder category. This is useful to just confirm typical language use of different genders.
-I then want to move on the a GENDER x GENDER analysis, which can be summarized in the below table:  
-|               | Male responder | Female responder |  
-|---------------|---------------:|------------------|  
-| Male poster   | MALE x MALE    | MALE x FEMALE    |  
-| Female poster | FEMALE x MALE  | FEMALE x FEMALE  |  
+I then want to move on the a GENDER x GENDER analysis, which can be summarized in the below table:
+
+|               | Male responder | Female responder |
+|---------------|----------------|------------------|
+| Male poster   | MALE x MALE    | MALE x FEMALE    |
+| Female poster | FEMALE x MALE  | FEMALE x FEMALE  |
+
 Essentially, I want to examine how interactions differ when a male is responding to a male vs. a female and a female is reponding to a male vs. a female. A more formal hypothesis about how these differ can be generated after I read up on more sociolinguistic papers.
 
 ### Predictive analysis
