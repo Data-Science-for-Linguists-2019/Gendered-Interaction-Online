@@ -2,10 +2,9 @@
 
 ## Goals for the project
 I have two main goals for my project:
-1. Look at
-look at GENDER X GENDER
-machine learning - guess gender of poster and gender of responder?
-still unsure if I want to do anything with sentiment
+1. Look at GENDER X GENDER
+2. Predictive analysis: guess gender of poster and gender of responder
+3. Still unsure if I want to do anything with the sentiment file
 
 ## Preparing for the study
 To prepare for this study and the creation of my hypotheses, I need to read up on some sociolinguistics papers about gender. I can also read over the paper that accompanies the data set I am using (https://nlp.stanford.edu/robvoigt/rtgender/rtgender.pdf), however, I don't want to just replicate their results. I would like to understand what they did and base my research off of it, but also dive in deeper to some things that were left unexplored (more specific goals outlined later).
@@ -30,3 +29,13 @@ Additionally, some files contain names of posters rather than their genders. Thi
 
 ## Analysis
 
+### GENDER x GENDER linguistic analysis
+To start, I want to look at some simple linguistic analysis measures. First, I can examine language used by male vs. female, ignoring the poster vs. responder category. This is useful to just confirm typical language use of different genders.
+I then want to move on the a GENDER x GENDER analysis, which can be summarized in the below table:  
+|               | Male responder | Female responder |
+|---------------|---------------:|------------------|
+| Male poster   | MALE x MALE    | MALE x FEMALE    |
+| Female poster | FEMALE x MALE  | FEMALE x FEMALE  |  
+Essentially, I want to examine how interactions differ when a male is responding to a male vs. a female and a female is reponding to a male vs. a female. A more formal hypothesis about how these differ can be generated after I read up on more sociolinguistic papers.
+
+### Predictive analysis
