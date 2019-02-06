@@ -2,7 +2,7 @@
 Katie's term project. Will examine the interaction between different genders in online postings from various social media websites.
 
 ## Project Info
-Title: Gendered Interaction Online
+Title: Gendered Interaction Online  
 By: Katie Thomas
 
 ## Brief Project Summary
