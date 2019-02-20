@@ -5,11 +5,11 @@ I created my GitHub repository, wrote a quick README document, and published the
 
 ## First Progress Report (2/21/19)
 ### Data Acquisition and Preliminary Examination
-At this point, I have confirmed that the dataset I've been working with (RtGender) is the one I definitely want to use. It is fairly large and contains a lot of information, but is also manageable to handle.
+At this point, I have confirmed that the dataset I've been working with (RtGender) is the one I definitely want to use. It is fairly large and contains a lot of information, but is also manageable to handle. Data samples can be found [here](data_samples/) (empty folder for now - will add soon).
 
 I then moved on to examining the dataset to get a better idea of what I am able to do with it. There are 10 csv files, which I examined pretty thoroughly in my [exploratory data analysis - exploring the dataset](exploratory_data_analysis/exploring_dataset.ipynb). Additionally, I can pretty confidently say that I won't be using the annotations file (examined at the end of the linked file), as it doesn't directly relate to my goals for the project.
 
-I've also been reading up on some aspects of sociolinguistics, though not very much. This is somthing I want to focus more heavily on soon as I begin to develop more formal hypotheses.
+I've also been reading up on some aspects of sociolinguistics, though not very much. This is something I want to focus more heavily on soon as I begin to develop more formal hypotheses.
 
 ### Cleaning/Reorganizing Data
 While exploring the data set, I was able to make some decisions about how I want to alter the data set to fit my own needs. The most important goal for my modifications was to combine the post and response files so that we could see them at the same time, rather than matching up the response to the specific post in another DataFrame. However, I don't think I will be combining all of the data sets - that is, I will keep the different categories separate (Facebook congress, Facebook wiki, Fitocracy, Reddit, and TED). The beginning of my cleaning and reorganizing can be found in my [exploratory data analysis - modifying the dataset](exploratory_data_analysis/modifying_dataset.ipynb).
