@@ -18,7 +18,7 @@ While exploring the data set, I was able to make some decisions about how I want
 Included on the website where I downloaded my data from is some (very brief) licensing information:
 
 > RtGender is available for research purposes only. By downloading the corpus you agree that you will use it only for non-commercial, non-nefarious research purposes.
-
+>
 > Sign your name to agree that you are downloading the corpus for research purposes only.
 
 I still have to read up on this a bit, as I'm not entirely sure what this means for redistribution of the data. Am I allowed to redistribute it freely, as long as it's for non-commercial research purposes? There is also contact information listed, so if it comes down to it, I can ask the creators directly. I think that overall, the sharing of the data shouldn't be too difficult as long as they are credited.
