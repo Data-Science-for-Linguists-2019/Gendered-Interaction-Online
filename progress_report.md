@@ -9,12 +9,19 @@ At this point, I have confirmed that the dataset I've been working with (RtGende
 
 I then moved on to examining the dataset to get a better idea of what I am able to do with it. There are 10 csv files, which I examined pretty thoroughly in my [exploratory data analysis - exploring the dataset](exploratory_data_analysis/exploring_dataset.ipynb). Additionally, I can pretty confidently say that I won't be using the annotations file (examined at the end of the linked file), as it doesn't directly relate to my goals for the project.
 
+I've also been reading up on some aspects of sociolinguistics, though not very much. This is somthing I want to focus more heavily on soon as I begin to develop more formal hypotheses.
+
 ### Cleaning/Reorganizing Data
 While exploring the data set, I was able to make some decisions about how I want to alter the data set to fit my own needs. The most important goal for my modifications was to combine the post and response files so that we could see them at the same time, rather than matching up the response to the specific post in another DataFrame. However, I don't think I will be combining all of the data sets - that is, I will keep the different categories separate (Facebook congress, Facebook wiki, Fitocracy, Reddit, and TED). The beginning of my cleaning and reorganizing can be found in my [exploratory data analysis - modifying the dataset](exploratory_data_analysis/modifying_dataset.ipynb).
 
-### Data End Game
-
 ### Sharing Plan
+Included on the website where I downloaded my data from is some (very brief) licensing information:
+
+> RtGender is available for research purposes only. By downloading the corpus you agree that you will use it only for non-commercial, non-nefarious research purposes.
+
+> Sign your name to agree that you are downloading the corpus for research purposes only.
+
+I still have to read up on this a bit, as I'm not entirely sure what this means for redistribution of the data. Am I allowed to redistribute it freely, as long as it's for non-commercial research purposes? There is also contact information listed, so if it comes down to it, I can ask the creators directly. I think that overall, the sharing of the data shouldn't be too difficult as long as they are credited.
 
 ## Second Progress Report (3/19/19)
 
