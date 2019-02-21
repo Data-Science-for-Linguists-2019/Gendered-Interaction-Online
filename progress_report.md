@@ -5,9 +5,9 @@ I created my GitHub repository, wrote a quick README document, and published the
 
 ## First Progress Report (2/21/19)
 ### Data Acquisition and Preliminary Examination
-At this point, I have confirmed that the dataset I've been working with (RtGender) is the one I definitely want to use. It is fairly large and contains a lot of information, but is also manageable to handle. Data samples can be found [here](data_samples/) (empty folder for now - will add soon).
+At this point, I have confirmed that the dataset I've been working with (RtGender) is the one I definitely want to use. It is fairly large and contains a lot of information, but is also manageable to handle. Data samples can be found [here](data_samples/). I was a little unsure of the extent to which I should post the data samples. I decided to use 500 lines from the Facebook congress posts and 500 lines from the Reddit responses, but this can be modified/updated if needed.
 
-I then moved on to examining the dataset to get a better idea of what I am able to do with it. There are 10 csv files, which I examined pretty thoroughly in my [exploratory data analysis - exploring the dataset](exploratory_data_analysis/exploring_dataset.ipynb). Additionally, I can pretty confidently say that I won't be using the annotations file (examined at the end of the linked file), as it doesn't directly relate to my goals for the project.
+I then moved on to examining the dataset to get a better idea of what I am able to do with it. There are 10 csv files, which I examined closely in my [exploratory data analysis - exploring the dataset](exploratory_data_analysis/exploring_dataset.ipynb). Additionally, I can pretty confidently say that I won't be using the annotations file (examined at the end of the linked file), as it doesn't directly relate to my goals for the project.
 
 I've also been reading up on some aspects of sociolinguistics, though not very much. This is something I want to focus more heavily on soon as I begin to develop more formal hypotheses.
 
@@ -22,6 +22,8 @@ Included on the website where I downloaded my data from is some (very brief) lic
 > Sign your name to agree that you are downloading the corpus for research purposes only.
 
 I still have to read up on this a bit, as I'm not entirely sure what this means for redistribution of the data. Am I allowed to redistribute it freely, as long as it's for non-commercial research purposes? There is also contact information listed, so if it comes down to it, I can ask the creators directly. I think that overall, the sharing of the data shouldn't be too difficult as long as they are credited.
+
+However, I don't know if it's reasonable to share all 5 GB of my data (even if it is permitted). At the minimum, I would like to be able to display some data from each file, so the format of the different files is clear.
 
 ## Second Progress Report (3/19/19)
 
