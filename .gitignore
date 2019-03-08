@@ -1,3 +1,4 @@
-.DS_Store
-private/
-.ipynb_checkpoints
+.DS_Store	# Mac stuff
+private/	# where I'm keeping my data
+.ipynb_checkpoints	# jupyter notebook checkpoints
+.pkl	# pickle files
