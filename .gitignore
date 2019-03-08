@@ -8,4 +8,4 @@ private/
 .ipynb_checkpoints
 
 # pickle files
-.pkl
+*.pkl
