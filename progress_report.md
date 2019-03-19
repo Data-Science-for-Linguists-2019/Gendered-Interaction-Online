@@ -26,9 +26,15 @@ I still have to read up on this a bit, as I'm not entirely sure what this means 
 However, I don't know if it's reasonable to share all 5 GB of my data (even if it is permitted). At the minimum, I would like to be able to display some data from each file, so the format of the different files is clear.
 
 ## Second Progress Report (3/19/19)
-### Moving forward with the data
+### Moving Forward with the Data
 My biggest accomplishment for this progress report is probably found in finishing up my data reorganization. I created and combined dataframes for posts and responses for all of my files. This can be found in the same modification file that I started in the first progress report, which is found [here](exploratory_data_analysis/modifying_dataset.ipynb). In the file, I walk through the process of how I combined these files and made them my own. I also pickled the files so I could reopen them in a new Jupyter Notebook file dedicated to more in-depth analysis.
 
 Moving on to some more formal analysis can be found [here](exploratory_data_analysis/main_analysis.ipynb). In this file, I reiterate some basic analysis of the files to keep it all in one place, as well as delving a little deeper. I then began to move on to conduct some basic linguistic analysis, and have so far completed the token count and average sentence length. However, since my files are so large, I conducted this analysis on a much smaller sample.
+
+### Sharing Scheme
+The data seems to be limited to only those who sign to agree to use it for non-commercial use. Thus, I should not be able to redistribute this data, as I don't know what other people may do with this data. This data can be downloaded for anyone who wants to use it though, as long as they personally sign their name. Downloading is located at the bottom of [this page](https://nlp.stanford.edu/robvoigt/rtgender/).
+
+### Licensing
+
 
 ## Third Progress Report (4/9/19)
