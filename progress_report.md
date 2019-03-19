@@ -31,10 +31,21 @@ My biggest accomplishment for this progress report is probably found in finishin
 
 Moving on to some more formal analysis can be found [here](exploratory_data_analysis/main_analysis.ipynb). In this file, I reiterate some basic analysis of the files to keep it all in one place, as well as delving a little deeper. I then began to move on to conduct some basic linguistic analysis, and have so far completed the token count and average sentence length. However, since my files are so large, I conducted this analysis on a much smaller sample.
 
+### Data Size
+I am using 5 files: Facebook Congress posts, Facebook Wiki posts, Fitocracy posts, Reddit posts, and TED posts. These are each made up of posts and their corresponding responses (except for the TED file - this only has responses as the original source was a video and not a post). I have them organized so that each response has it's own row, since many times there are multiple responses per post. When this happens, the info about the post is repeated in each row, but the info about the response is unique to that row. The actual sizes are:
+
+- Facebook Congress: 14,015,811 entries
+- Facebook Wiki: 10,699,137 entries
+- Fitocracy: 318,535 entries
+- Reddit: 1,453,512 entries
+- TED: 190,347 entries
+
+For my linguistic analysis, I have reduced the size of each of these files to 50,000 entries, since any sort of analysis on files this big seemed to be going very slowly.
+
 ### Sharing Scheme
-The data seems to be limited to only those who sign to agree to use it for non-commercial use. Thus, I should not be able to redistribute this data, as I don't know what other people may do with this data. This data can be downloaded for anyone who wants to use it though, as long as they personally sign their name. Downloading is located at the bottom of [this page](https://nlp.stanford.edu/robvoigt/rtgender/).
+The data seems to be limited to only those who sign to agree to use it for non-commercial use. Thus, I should not be able to redistribute this data, as I don't know what other people may do with this data. It can be downloaded for anyone who wants to use it though, as long as they personally sign their name. Downloading is located at the bottom of [this page](https://nlp.stanford.edu/robvoigt/rtgender/).
 
 ### Licensing
-I am including an MIT license with my project. This is because I don't mind others using and redistributing my code, as long as I am credited as the original code source. I know that there are still many improvements that can be made to my analysis, and it would definitely be easier for others to do so when it's organized in the way that I have put the data together. I'm very open to seeing how other people could use and develop my analysis. It's also important to note that if they want to recreate my code exactly, they have to sign for the data from the original data source.
+I am including an MIT license with my project. This is because I don't mind others using and redistributing my code, as long as I am credited as the original code source. I know that there are still many improvements that can be made to my analysis, and it would definitely be easier for others to do so when it's organized in the way that I have put the data together. I'm very open to seeing how other people could use and develop my analysis. It's also important to note that if they want to recreate my code exactly, they still have to sign for the data from the original data source.
 
 ## Third Progress Report (4/9/19)
