@@ -35,6 +35,6 @@ Moving on to some more formal analysis can be found [here](exploratory_data_anal
 The data seems to be limited to only those who sign to agree to use it for non-commercial use. Thus, I should not be able to redistribute this data, as I don't know what other people may do with this data. This data can be downloaded for anyone who wants to use it though, as long as they personally sign their name. Downloading is located at the bottom of [this page](https://nlp.stanford.edu/robvoigt/rtgender/).
 
 ### Licensing
-
+I am including an MIT license with my project. This is because I don't mind others using and redistributing my code, as long as I am credited as the original code source. I know that there are still many improvements that can be made to my analysis, and it would definitely be easier for others to do so when it's organized in the way that I have put the data together. I'm very open to seeing how other people could use and develop my analysis. It's also important to note that if they want to recreate my code exactly, they have to sign for the data from the original data source.
 
 ## Third Progress Report (4/9/19)
