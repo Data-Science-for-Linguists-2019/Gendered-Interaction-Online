@@ -29,7 +29,7 @@ However, I don't know if it's reasonable to share all 5 GB of my data (even if i
 ### Moving Forward with the Data
 My biggest accomplishment for this progress report is probably found in finishing up my data reorganization. I created and combined dataframes for posts and responses for all of my files. This can be found in the same modification file that I started in the first progress report, which is found [here](exploratory_data_analysis/modifying_dataset.ipynb). In the file, I walk through the process of how I combined these files and made them my own. I also pickled the files so I could reopen them in a new Jupyter Notebook file dedicated to more in-depth analysis.
 
-Moving on to some more formal analysis can be found in my [exploratory data analysis - main analysis](exploratory_data_analysis/main_analysis.ipynb). In this file, I reiterate some basic analysis of the files to keep it all in one place, as well as delving a little deeper. I then began to move on to conduct some basic linguistic analysis, and have so far completed the token count and average sentence length. However, since my files are so large, I conducted this analysis on a much smaller sample.
+Moving on to some more formal analysis can be found in my [main analysis](main_analysis.ipynb). In this file, I reiterate some basic analysis of the files to keep it all in one place, as well as delving a little deeper. I then began to move on to conduct some basic linguistic analysis, and have so far completed the token count and average sentence length. However, since my files are so large, I conducted this analysis on a much smaller sample.
 
 ### Data Size
 I am using 5 files: Facebook Congress posts, Facebook Wiki posts, Fitocracy posts, Reddit posts, and TED posts. These are each made up of posts and their corresponding responses (except for the TED file - this only has responses as the original source was a video and not a post). I have them organized so that each response has it's own row, since many times there are multiple responses per post. When this happens, the info about the post is repeated in each row, but the info about the response is unique to that row. The actual sizes are:
@@ -49,3 +49,31 @@ The data seems to be limited to only those who sign to agree to use it for non-c
 I am including an MIT license with my project. This is because I don't mind others using and redistributing my code, as long as I am credited as the original code source. I know that there are still many improvements that can be made to my analysis, and it would definitely be easier for others to do so when it's organized in the way that I have put the data together. I'm very open to seeing how other people could use and develop my analysis. It's also important to note that if they want to recreate my code exactly, they still have to sign for the data from the original data source.
 
 ## Third Progress Report (4/9/19)
+### Specifics of Hypothesis
+I had some basic ideas of what I wanted to look at and examine with this data, but I decided to solidify my hypothesis more before moving on with the analysis. I read up on some reports of difference is male/female interaction, and decided I want to focus on three main aspects: hedges, compliments, and questions. The specifics of my predictions are located in the continuation of my [main analysis](main_analysis.ipynb).
+
+### Continuing with Analyis
+There are no changes to my main data files. I've continued with my analysis of the data and dive a little deeper into some linguistic aspects. As far as my hypothesis goes with hedges, compliments, and questions, all I've done so far is look at hedges. I'm not entirely sure how I want to analyze compliments and questions, since that's a little harder. My specific hypothesis about hedges is that women use more hedges than men, so I did a simple check of whether a list of hedges were present in the posts. I analyzed each file separately, and found that some matched with my hypthesis, whereas others did not.
+
+In summary:
+
+- Facebook Congress posts: women used more hedges (matches hypothesis!)
+- Facebook Wiki posts: men used more hedges (does not match hypothesis)
+- Fitocracy posts: about the same, but women maybe used a little more hedges (in right direction of hypothesis)
+- Fitocracy responses: men used more hedges (does not match hypothesis)
+- Reddit posts: women used more hedges (matches hypothesis!)
+- Reddit responses: women used more hedges (matches hypothesis!)
+
+So out of 6 checks, my hypothesis is supported 4 times - not bad.
+
+### Starting Machine Learning
+For machine learning, I had to create some new data frames to fit my purpose and goals. There are two main things I want to try to predict:
+
+1. Identify gender given text, regardless of whether they are the poster or responder
+	- To do this, I used my same sample files of 50,000, and combined the posts and responses into one data frame.
+2. Identify gender of poster and responder, given just the responder's text (do people respond differently to different genders?)
+	- To do this, I merged the files that have gender information for both the poster and the responder.
+
+The process of creating these files is located in the bottom of the above linked main analysis file. I then pickled the files and continued on with the actual machine learning aspect in a new file, called [machine learning](machine_learning.ipynb).
+
+In this file, I started with a brief summary of the statistics and baselines for my predictions. So far, I've only used Naive Bayes for analysis, as anything else seems to take a very long time. I'm going to continue to explore some more ML options, but I have accomplished some improvement in predicting gender so far. Details can be found in the file, as well as confusion matrices.
