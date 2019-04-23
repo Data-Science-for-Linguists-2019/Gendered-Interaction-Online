@@ -3,10 +3,9 @@ Katie Thomas
 kdt13@pitt.edu
 
 ## Motivation and Background Information
+How do men and women present themselves differently online? Do people respond differently to male vs. female posters? Do male/female responders respond differently depending on the gender they are responding to? These are some initial questions I had when thinking about this project. After reading up on some sociolinguistic literature (*Women, Men, and Language*, by Jennifer Coates). I came up with a few ideas of what to look at. Some notable differences that were discussed were hedges, compliments, and questions. It is thought that women use more hedges, i.e., phrases that express uncertainty, than men, which is possibly due to the fact that they are socialized to believe asserting themselves isn't "ladylike." Also, women tend to give and receive more compliments than men. Additionally, women tend to use more questions that "avoid the role of expert" (i.e., isn't it? don't you? etc.) than men.
 
 ## Data
-
-### Data Source
 I found my original data from a study done at Stanford University, called [RtGender](https://nlp.stanford.edu/robvoigt/rtgender/). At the bottom of the linked page, you can download the data yourself as long as you sign and agree to use the data for non-commercial research purposes only. This data includes csv files of posts and their corresponding responses from Facebook, TED, Fitocracy, and Reddit.
 
 ### Data Cleanup
@@ -27,13 +26,28 @@ These files were composed of Reddit posts and responses from a variety of subred
 #### TED
 This file only contains responses, as it was taken from responses to TED talks. Since these are videos, there was no post text. This time, the gender of the speaker was known, but not the gender of the responder. There were a few nulls to fix, as well as some formatting errors, but this time there was no merging necessary.
 
+## Hypothesis
+Coates' litearture allowed me to formulate a more specific hypothesis regarding my data:
+
+1. Responders "favor" their own gender. I was unsure of the specifics of this, since it's very vague, but I thought there would be a notable difference in how female responders responded to other females vs. males, and in how male responders responded to other males vs. females.
+2. Women use more hedges than men
+3. Women use more questions that "avoid the role of expert" than men.
+
+I also would have liked to hypothesize about women giving and receiving more compliments, but this seemed more difficult to analyze. For example, one way that I could think of analyzing this is to physically annotate occurrences of compliments, and then examine what genders and giving and receiving these compliments. This would take a very long time though, and I didn't get into it for my analysis.
+
 ## Analysis
 
 ### Overview
+I started with some basic analysis (located [here](https://nbviewer.jupyter.org/github/Data-Science-for-Linguists-2019/Gendered-Interaction-Online/blob/master/main_analysis.ipynb#Conduct-basic-analysis)) of each file so I could better understand what I was working with. One important thing to note is the gender distributions, as this is very important to my analysis. Fitocracy was the only file that this was close to being an equal distribution. Facebook Congress, Reddit, and TED were very male dominated, whereas Facebook Wiki was more female dominated.
+
+Something interesting to note is how male-dominated Reddit actually is. Out of 98 subreddits, only 5 had more female posters than male posters. Below is a graph of the first 20 subreddits to get an idea of how many more male posters there are (look at AskMen and AskReddit especially!).
+
+![png](images/subreddits.png)
 
 ### Linguistic Analysis by Gender
 
 ### Gender x Gender Analysis
+An important question to ask is whether the poster's gender is visible to the responder, as that is necessary for this analysis. For the two Facebook files, since the posts are from known people, the gender is known and available to the responders. For Fitocracy, I examined the setup of the website, and discovered that the gender is visible on the person's profile. This could be potentially problematic (since it isn't directly visible on the post), but many users also have pictures of themselves so gender can be inferred from the pictures, as well as clicking on the user's profile. For Reddit, I made sure to filter for "op_gender_visible," meaning the responder is able to see the poster's gender.
 
 ### Machine Learning
 
