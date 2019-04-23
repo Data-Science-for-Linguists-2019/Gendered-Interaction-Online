@@ -13,7 +13,7 @@ I found my original data from a study done at Stanford University, called [RtGen
 My goal for the cleanup was to combine the information about the posts into the information about the responses - keeping each individual source separate, as they had slightly different formats. Thus, the cleanup process was somewhat lengthy as I had to examine the best way to merge each file.
 
 #### Facebook Congress
-These files were from Facebook, comprised of posts from members of Congress, as well as responses to these posts. The gender is visible for the poster, but not for the responder. Many posts had many responses. I merged on the column called "post_id", as I discovered it was unique to the post in both post and response files. I also had to fill nulls in some columns, as sometimes there would be some missing information. Merging also created more nulls, as some posts had no responses. I decided not to delete any rows with nulls, since there could be other useful information in the same row. There also arose an interesting problem, when I realized that sometimes there were duplicate post text values, that were basically the same post by the same person but assigned to a different post ID. I did my best to remove these, making sure that they weren't removed if there was a response attached to it or if they were the first occurrence of the duplicate.
+These files were from Facebook, comprised of posts from members of Congress, as well as responses to these posts. The gender is visible for the poster, but not for the responder. Many posts had many responses. I merged on the column called "post_id", as I discovered it was unique to the post in both post and response files. I also filled the nulls with empty strings, since there could be some other worthwhile information in the same row. There also arose an interesting problem, when I realized that sometimes there were duplicate post text values, that were basically the same post by the same person but assigned to a different post ID. I did my best to remove these, making sure that they weren't removed if there was a response attached to it or if they were the first occurrence of the duplicate.
 
 #### Facebook Wiki
 Facebook Wiki files were composed of Facebook posts as well, except this time there was a wider range of industries represented (taken from Wikipedia category pages, like "male tennis players"). The gender is again only visible for the poster. These files were formatted in the same manner as the Facebook Congress files, so I faced some of the same challenges. Again, I merged on post ID and filled nulls with empty strings. Additionally, there were also some strange duplicate values of post text that I deleted in the same manner.
@@ -29,7 +29,11 @@ This file only contains responses, as it was taken from responses to TED talks. 
 
 ## Analysis
 
-### Linguistic and Gender x Gender Analysis
+### Overview
+
+### Linguistic Analysis by Gender
+
+### Gender x Gender Analysis
 
 ### Machine Learning
 
