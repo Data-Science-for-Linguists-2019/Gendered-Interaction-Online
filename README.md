@@ -3,7 +3,7 @@ Katie's term project. Will examine the interaction between different genders in 
 
 ## Project Info
 Title: Gendered Interaction Online  
-By: Katie Thomas (kdt13@pitt.edu)
+By: Katie Thomas (kdt13@pitt.edu)  
 Date: 4/26/19
 
 ## Brief Project Summary
@@ -24,6 +24,7 @@ How do people communicate with each other? How much does gender affect the way w
 		- [nbviewer version](https://nbviewer.jupyter.org/github/Data-Science-for-Linguists-2019/Gendered-Interaction-Online/blob/master/machine_learning.ipynb)
 	- [`genderxgender.ipynb`](genderxgender.ipynb): a quick analysis of more specific words that different genders may or may not use
 		- [nbviewer version](https://nbviewer.jupyter.org/github/Data-Science-for-Linguists-2019/Gendered-Interaction-Online/blob/master/genderxgender.ipynb)
+- [images](images/): folder containing .png files from my Notebook files
 - [Final report](final_report.md): in depth discussion of the project process, as well as any conclusions and findings
 
 ## Guestbook
