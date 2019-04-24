@@ -54,15 +54,24 @@ For hedges and questions (analysis starting [here](https://nbviewer.jupyter.org/
 ### Gender x Gender Analysis
 An important question to ask is whether the poster's gender is visible to the responder, as that is necessary for this analysis. For the two Facebook files, since the posts are from known people, the gender is known and available to the responders. For Fitocracy, I examined the setup of the website, and discovered that the gender is visible on the person's profile. This could be potentially problematic (since it isn't directly visible on the post), but many users also have pictures of themselves so gender can be inferred from the pictures, as well as clicking on the user's profile. For Reddit, I made sure to filter for "op_gender_visible," meaning the responder is able to see the poster's gender.
 
+#### Fitocracy
+Response length
 ![png](images/fit_response_length_bygender.png)
-
+Response sentence length
 ![png](images/fit_response_slen_bygender.png)
-
+#### Reddit
+Response length
 ![png](images/reddit_response_length_bygender.png)
-
+Response sentence length
 ![png](images/reddit_response_slen_bygender.png)
 
 ### Machine Learning
+Predict gender
+![png](images/predict_1gender_cm.png)
+Predict both genders
+![png](images/predict_2genders_cm.png)
+Predict poster's gender
+![png](iamges/predict_poster_cm.png)
 
 ## Conclusion
 
