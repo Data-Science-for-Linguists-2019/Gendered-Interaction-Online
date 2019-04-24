@@ -49,10 +49,18 @@ I then moved onto some linguistic analysis, located [here](https://nbviewer.jupy
 
 The analysis of the TED file was never significant, so I'm not going to discuss it here. However, overall, it seems that female posters and responders had longer posts/responses, as well as longer sentences. This was especially prominent in Facebook Congress, Fitocracy, and Reddit. Facebook Wiki was opposite (male posters had longer posts and sentences) and TED was not significant. Also, in Fitocracy and Reddit, the responses to female posters were longer than responses to male posters.
 
-For hedges and questions (analysis starting [here](https://nbviewer.jupyter.org/github/Data-Science-for-Linguists-2019/Gendered-Interaction-Online/blob/master/main_analysis.ipynb#Linguistic-difference-in-gender), I created functions to search for them in the text. For hedges, I searched for "I think", "I guess", "I mean", "kind of", "I'm sure", "you know", "sort of", "perhaps", and "maybe". This is of course not an exhaustive list, but these are some common ones that people use. When conducting the analysis, female posters/responders seem to dominate once again, but it's less prominent. Female posters use more hedges in Facebook Congress and Reddit, and female responders use more hedges in Reddit as well. Male posters only use more hedges in Facebook Wiki, and there was no significance for Fitocracy. Unfortunately, there was no signficance for questions in any of the files. The questions I included were "do you?", "don't you?", "aren't there?", and "isn't it?". Some p-values seemed to be low enough, but the questions were present so infrequently (less than 0.1%!) that I made the decision to not count any of them as significant. To more formally do this, annotation would again make more sense.
+For hedges and questions (analysis starting [here](https://nbviewer.jupyter.org/github/Data-Science-for-Linguists-2019/Gendered-Interaction-Online/blob/master/main_analysis.ipynb#Linguistic-difference-in-gender)), I created functions to search for them in the text. For hedges, I searched for "I think", "I guess", "I mean", "kind of", "I'm sure", "you know", "sort of", "perhaps", and "maybe". This is of course not an exhaustive list, but these are some common ones that people use. When conducting the analysis, female posters/responders seem to dominate once again, but it's less prominent. Female posters use more hedges in Facebook Congress and Reddit, and female responders use more hedges in Reddit as well. Male posters only use more hedges in Facebook Wiki, and there was no significance for Fitocracy. Unfortunately, there was no signficance for questions in any of the files. The questions I included were "do you?", "don't you?", "aren't there?", and "isn't it?". Some p-values seemed to be low enough, but the questions were present so infrequently (less than 0.1%!) that I made the decision to not count any of them as significant. To more formally do this, annotation would again make more sense.
 
 ### Gender x Gender Analysis
 An important question to ask is whether the poster's gender is visible to the responder, as that is necessary for this analysis. For the two Facebook files, since the posts are from known people, the gender is known and available to the responders. For Fitocracy, I examined the setup of the website, and discovered that the gender is visible on the person's profile. This could be potentially problematic (since it isn't directly visible on the post), but many users also have pictures of themselves so gender can be inferred from the pictures, as well as clicking on the user's profile. For Reddit, I made sure to filter for "op_gender_visible," meaning the responder is able to see the poster's gender.
+
+![png](images/fit_response_length_bygender.png)
+
+![png](images/fit_response_slen_bygender.png)
+
+![png](images/reddit_response_length_bygender.png)
+
+![png](images/reddit_response_slen_bygender.png)
 
 ### Machine Learning
 
