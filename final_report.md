@@ -11,19 +11,19 @@ I found my original data from a study done at Stanford University, called [RtGen
 ### Data Cleanup
 My goal for the cleanup was to combine the information about the posts into the information about the responses - keeping each individual source separate, as they had slightly different formats. Thus, the cleanup process was somewhat lengthy as I had to examine the best way to merge each file.
 
-#### Facebook Congress
+#### [Facebook Congress](https://nbviewer.jupyter.org/github/Data-Science-for-Linguists-2019/Gendered-Interaction-Online/blob/master/exploratory_data_analysis/modifying_dataset.ipynb#Facebook-Congress-posts-and-responses)
 These files were from Facebook, comprised of posts from members of Congress, as well as responses to these posts. The gender is visible for the poster, but not for the responder. Many posts had many responses. I merged on the column called "post_id", as I discovered it was unique to the post in both post and response files. I also filled the nulls with empty strings, since there could be some other worthwhile information in the same row. There also arose an interesting problem, when I realized that sometimes there were duplicate post text values, that were basically the same post by the same person but assigned to a different post ID. I did my best to remove these, making sure that they weren't removed if there was a response attached to it or if they were the first occurrence of the duplicate.
 
-#### Facebook Wiki
+#### [Facebook Wiki](https://nbviewer.jupyter.org/github/Data-Science-for-Linguists-2019/Gendered-Interaction-Online/blob/master/exploratory_data_analysis/modifying_dataset.ipynb#Facebook-wiki-posts-and-responses)
 Facebook Wiki files were composed of Facebook posts as well, except this time there was a wider range of industries represented (taken from Wikipedia category pages, like "male tennis players"). The gender is again only visible for the poster. These files were formatted in the same manner as the Facebook Congress files, so I faced some of the same challenges. Again, I merged on post ID and filled nulls with empty strings. Additionally, there were also some strange duplicate values of post text that I deleted in the same manner.
 
-#### Fitocracy
+#### [Fitocracy](https://nbviewer.jupyter.org/github/Data-Science-for-Linguists-2019/Gendered-Interaction-Online/blob/master/exploratory_data_analysis/modifying_dataset.ipynb#Fitocracy-posts-and-responses)
 Fitocracy is a fitness social media page, where people can discuss fitness, progress, etc. This time, genders were always visible (for both poster and responder!) and there was only one response per post. I again merged on post ID, as it was unique to the post. There were some duplicates that seemed like automated posts ("Welcome to Fitocracy group!"), but the corresponding responses seemed to be unique, so I didn't get rid of duplicate posts this time.
 
-#### Reddit
+#### [Reddit](https://nbviewer.jupyter.org/github/Data-Science-for-Linguists-2019/Gendered-Interaction-Online/blob/master/exploratory_data_analysis/modifying_dataset.ipynb#Reddit-posts-and-responses)
 These files were composed of Reddit posts and responses from a variety of subreddits. Again, there was only one response per post. However, a difference in this file was that the responder's gender was only known sometimes. I could again merge on post ID, and had to fill a few nulls. The duplicates in this case seemed relatively normal, so I again did not get rid of duplicate posts.
 
-#### TED
+#### [TED](https://nbviewer.jupyter.org/github/Data-Science-for-Linguists-2019/Gendered-Interaction-Online/blob/master/exploratory_data_analysis/modifying_dataset.ipynb#TED-responses)
 This file only contains responses, as it was taken from responses to TED talks. Since these are videos, there was no post text. This time, the gender of the speaker was known, but not the gender of the responder. There were a few nulls to fix, as well as some formatting errors, but this time there was no merging necessary.
 
 ## Hypothesis
@@ -32,8 +32,6 @@ Coates' litearture allowed me to formulate a more specific hypothesis regarding 
 1. Responders "favor" their own gender. I was unsure of the specifics of this, since it's very vague, but I thought there would be a notable difference in how female responders responded to other females vs. males, and in how male responders responded to other males vs. females.
 2. Women use more hedges than men
 3. Women use more questions that "avoid the role of expert" than men.
-
-I also would have liked to hypothesize about women giving and receiving more compliments, but this seemed more difficult to analyze. For example, one way that I could think of analyzing this is to physically annotate occurrences of compliments, and then examine what genders and giving and receiving these compliments. This would take a very long time though, and I didn't get into it for my analysis.
 
 ## Analysis
 An important question to ask is whether the poster's gender is visible to the responder, as that is necessary for this analysis. For the two Facebook files, since the posts are from known people, the gender is known and available to the responders. For Fitocracy, I examined the setup of the website, and discovered that the gender is visible on the person's profile. This could be potentially problematic (since it isn't directly visible on the post), but many users also have pictures of themselves so gender can be inferred from the pictures, as well as clicking on the user's profile. For Reddit, I made sure to filter for "op_gender_visible," meaning the responder is able to see the poster's gender.
@@ -88,4 +86,11 @@ Predict poster's gender
 ![png](images/predict_poster_cm.png)
 
 ## Conclusion
+
+### Difficulties
+Something that I had wanted to analyze but didn't get around to was looking at compliments. I had initially included in my hypothesis that women would give and receive more compliments, but this seemed more difficult to analyze. For example, one way that I could think of analyzing this is to physically annotate occurrences of compliments, and then examine what genders and giving and receiving these compliments. This would take a very long time though, and I didn't get into it for my analysis.
+
+I also wish that my machine learning results were more significant. Predicting gender seems to be a difficult task, but I wished there would have been more prominent results. To go along with this, I would have liked to further examine the most informative features
+
+### End Results
 
