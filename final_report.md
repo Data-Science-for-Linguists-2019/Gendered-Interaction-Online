@@ -56,9 +56,9 @@ For this analysis, we can only look at Fitocracy and Reddit files, because they 
 #### Response text length and response sentence length
 In the [Fitocracy file](https://nbviewer.jupyter.org/github/Data-Science-for-Linguists-2019/Gendered-Interaction-Online/blob/master/main_analysis.ipynb#Fitocracy-linguistic-analysis), male responders have longer responses and sentences when responding to males than when responding to females and female responders have longer responses and sentences when responding to females than when responding to males. See the below boxplots:
 
-Response text length                            | Response sentence length
-:----------------------------------------------:|:---------------------------------------------
-![png](images/fit_response_length_bygender.png) | ![png](images/fit_response_slen_bygender.png)
+| Response text length                            | Response sentence length                      |
+| :---------------------------------------------: | :-------------------------------------------: |
+| ![png](images/fit_response_length_bygender.png) | ![png](images/fit_response_slen_bygender.png) |
 
 [Reddit](https://nbviewer.jupyter.org/github/Data-Science-for-Linguists-2019/Gendered-Interaction-Online/blob/master/main_analysis.ipynb#Reddit-linguistic-analysis) is somewhat the opposite, as this time male responders have longer responses when responding to females than when responding to males. However, this time, there isn't a significant difference in the length of female responses, and the response sentence lengths are never significant. See the below boxplot:
 
@@ -67,6 +67,15 @@ Response text length                            | Response sentence length
 In summary, this somewhat matches my hypothesis of same genders "favoring each other." When the results are significant, they are more often male-to-male or female-to-female than opposite genders. However, there are still a good amount of insignificant results.
 
 #### Exploration
+As another addition to my Gender x Gender analysis, I decided to quickly look at the presence of a few specific words that were "stereotypical" (file located [here](https://nbviewer.jupyter.org/github/Data-Science-for-Linguists-2019/Gendered-Interaction-Online/blob/master/genderxgender.ipynb)) First, I decided to look at stereotypical male-to-male language ("bro", "dude", and "man") and female-to-female language ("girly", "girlie", "chica"). Female-to-female was a little more difficult to come up with, as I don't think they are as prominent. I originall had "girl" in the list of female-to-female language, but it turned out that it was such a common word that male posters used it just as frequently, if not more. Thus, I took out "girl" and got a more reasonable result. Below are the graphs of percentages of posters using this language:
+
+| Male to male (bro, dude, and man)   | Female to female (girly, girlie, and chica)   |
+| :---------------------------------: | :-------------------------------------------: |
+| ![png](images/maletomale.png)       | ![png](images/femaletofemale2.png)            |
+
+As we can see, the male-to-male language is dominated by male responders responding to male posters, and the female-to-female language is dominated by female responders responding to female posters.
+
+I also examined singular words/phrases: "beautiful", "sexy", and "good job". The dominating group for using "beautiful" was female-to-female, followed by male-to-female. The dominating group for using "sexy" was male-to-female, followed by female-to-male. Lastly, the dominating group for using "good job" was male-to-male, followed closely by female-to-female.
 
 ### Machine Learning
 I had two original goals for machine learning:
@@ -102,4 +111,6 @@ Another difficulty I faced was the analysis of question use. It was hard to come
 I also wish that my machine learning results were more significant. Something that I struggled with was adding other features. I [used hstack](https://nbviewer.jupyter.org/github/Data-Science-for-Linguists-2019/Gendered-Interaction-Online/blob/master/machine_learning.ipynb#Try-adding-other-features) to try to add features for text length, but my accuracy score actually ended up being lower than the baseline. Predicting gender seems to be a difficult task, but I wish there would have been more prominent results.
 
 ### End Results
+There were a good amount of significant findings that resulted from this project. For this summary, I will be going over the results that were present in the majority (but not all) of the files. Female posters/responders seemed to have longer posts and use longer sentences in general than male posters/responders. Female posters/responders also seemed to use more hedges in general than male posters/responders. It also seems that it's more likely that people will have longer responses and use longer sentences when they are responding to someone of the same gender as themselves.
 
+Parts of my hypothesis are supported - same genders "favor" each other (i.e., use longer posts) and female posters use more hedges. However, I would have liked to go more in depth about same-gender interaction. I briefly discussed male-to-male and female-to-female language, but there are sure to be other qualities that this gender interaction exhibits. There is still a lot to learn about how different genders interact online. This data didn't contain age information, but it would likely be a contributing factor to how people respond as well. Additionally, hedges, questions, and compliments could be looked into further in depth.
