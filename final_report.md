@@ -46,51 +46,60 @@ Something interesting to note is how male-dominated Reddit actually is. Out of 9
 ### Linguistic Analysis by Gender
 I then moved onto some linguistic analysis, located [here](https://nbviewer.jupyter.org/github/Data-Science-for-Linguists-2019/Gendered-Interaction-Online/blob/master/main_analysis.ipynb#Conduct-linguistic-analysis). This is again broken up into the separate data source files. However, before conducting analysis, I reduced the sizes of the files down to 50,000, as some of them were huge and would take a very large amount of time to do something like word tokenization. For my linguistic analysis, I calculated text length, average sentence length, and average Google k-band. I also used t-tests to determine the significance of these differences by gender.
 
-The analysis of the TED file was never significant, so I'm not going to discuss it here. For the rest of the files, overall, it seems that female posters and responders had longer posts/responses, as well as longer sentences. This was especially prominent in Facebook Congress, Fitocracy, and Reddit. Facebook Wiki was opposite (male posters had longer posts and sentences) and TED was not significant. Also, in Fitocracy and Reddit, the responses to female posters were longer than responses to male posters.
+Overall, it seems that female posters and responders had longer posts/responses, as well as longer sentences. This was especially prominent in Facebook Congress, Fitocracy, and Reddit. Facebook Wiki was opposite (male posters had longer posts and sentences) and TED was not significant. Also, in Fitocracy and Reddit, the responses to female posters were longer than responses to male posters. There was never any significance in the TED file.
 
-For hedges and questions (analysis starting [here](https://nbviewer.jupyter.org/github/Data-Science-for-Linguists-2019/Gendered-Interaction-Online/blob/master/main_analysis.ipynb#Linguistic-difference-in-gender)), I created functions to search for them in the text. For hedges, I searched for "I think", "I guess", "I mean", "kind of", "I'm sure", "you know", "sort of", "perhaps", and "maybe". This is of course not an exhaustive list, but these are some common ones that people use. When conducting the analysis, female posters/responders seem to dominate once again, but it's less prominent. Female posters use more hedges in Facebook Congress and Reddit, and female responders use more hedges in Reddit as well. Male posters only use more hedges in Facebook Wiki, and there was no significance for Fitocracy. Unfortunately, there was no signficance for questions in any of the files. The questions I included were "do you?", "don't you?", "aren't there?", and "isn't it?". Some p-values seemed to be low enough, but the questions were present so infrequently (less than 0.1%!) that I made the decision to not count any of them as significant. To more formally do this, annotation would again make more sense.
+For hedges, (analysis starting [here](https://nbviewer.jupyter.org/github/Data-Science-for-Linguists-2019/Gendered-Interaction-Online/blob/master/main_analysis.ipynb#Linguistic-difference-in-gender)), I created functions to search for them in the text. I searched for "I think", "I guess", "I mean", "kind of", "I'm sure", "you know", "sort of", "perhaps", and "maybe". This is of course not an exhaustive list, but these are some common ones that people use. When conducting the analysis, female posters/responders seem to dominate once again, but it's less prominent. Female posters use more hedges in Facebook Congress and Reddit, and female responders use more hedges in Reddit as well. Male posters only use more hedges in Facebook Wiki, and there was no significance for Fitocracy. For my question analysis, I did not find any significance in the use between male and female posters.
 
 ### Gender x Gender Analysis
 For this analysis, we can only look at Fitocracy and Reddit files, because they are the only ones that we know the gender of both poster and responder.
 
-When analyzing response length in Fitocracy, male responders have longer responses when responding to males than when responding to females and female responders have longer responses when responding to females than when responding to males. See the below boxplot:
+#### Response text length and response sentence length
+In the [Fitocracy file](https://nbviewer.jupyter.org/github/Data-Science-for-Linguists-2019/Gendered-Interaction-Online/blob/master/main_analysis.ipynb#Fitocracy-linguistic-analysis), male responders have longer responses and sentences when responding to males than when responding to females and female responders have longer responses and sentences when responding to females than when responding to males. See the below boxplots:
 
-![png](images/fit_response_length_bygender.png)
+Response text length                            | Response sentence length
+:----------------------------------------------:|:---------------------------------------------
+![png](images/fit_response_length_bygender.png) | ![png](images/fit_response_slen_bygender.png)
 
-Reddit is somewhat the opposite, as this time male responders have longer responses when responding to females than when responding to males.
-
-Response sentence length
-
-![png](images/fit_response_slen_bygender.png)
-
-#### Reddit
-Response length
+[Reddit](https://nbviewer.jupyter.org/github/Data-Science-for-Linguists-2019/Gendered-Interaction-Online/blob/master/main_analysis.ipynb#Reddit-linguistic-analysis) is somewhat the opposite, as this time male responders have longer responses when responding to females than when responding to males. However, this time, there isn't a significant difference in the length of female responses, and the response sentence lengths are never significant. See the below boxplot:
 
 ![png](images/reddit_response_length_bygender.png)
 
-Response sentence length
+In summary, this somewhat matches my hypothesis of same genders "favoring each other." When the results are significant, they are more often male-to-male or female-to-female than opposite genders. However, there are still a good amount of insignificant results.
 
-![png](images/reddit_response_slen_bygender.png)
+#### Exploration
 
 ### Machine Learning
-Predict gender
+I had two original goals for machine learning:
+
+1. Predict the gender of the poster/responder, regardless of whether it was from a poster or responder
+2. Predict the gender of both the poster and the responder, only given the response text
+
+For my first goal, I [created a new dataframe](https://nbviewer.jupyter.org/github/Data-Science-for-Linguists-2019/Gendered-Interaction-Online/blob/master/main_analysis.ipynb#Goal-1) by combining the samples from the different sources. The baseline here was 63% male. Using Naive Bayes, I was able to [fit a model](https://nbviewer.jupyter.org/github/Data-Science-for-Linguists-2019/Gendered-Interaction-Online/blob/master/machine_learning.ipynb#Predict-gender-of-poster/responder) to achieve about 71% accuracy. This involved using nltk's tokenizer, as I discovered that keeping punctuation actually aided the classifier. Below is the confusion matrix.
 
 ![png](images/predict_1gender_cm.png)
 
-Predict both genders
+As we can see, it still struggles to classify female posters, but we do have some increase in accuracy from the baseline. I quickly examined some puncutation use as well, and discovered that female posters and responders seemed to be more likely to use exclamation points (especially two in a row!!).
+
+For my second goal, I also [created a new dataframe](https://nbviewer.jupyter.org/github/Data-Science-for-Linguists-2019/Gendered-Interaction-Online/blob/master/main_analysis.ipynb#Goal-2) by combining the data that had both genders known (Fitocracy and Reddit only). The baseline here was 38% male responding to male. Using Naive Bayes, I was able to [fit a model](https://nbviewer.jupyter.org/github/Data-Science-for-Linguists-2019/Gendered-Interaction-Online/blob/master/machine_learning.ipynb#Predict-both-genders) to achieve about 47% accuracy. Below is the confusion matrix.
 
 ![png](images/predict_2genders_cm.png)
 
-Predict poster's gender
+This is clearly not a very high accuracy score, but it is higher than the baseline by about 9 percentage points. I figured this would be the most difficult task, as there are four different possible labels to predict (MM, MW, WM, WW), and the classifier was only given the response text.
+
+Lastly, I came up with another goal to [predict only the poster's gender](https://nbviewer.jupyter.org/github/Data-Science-for-Linguists-2019/Gendered-Interaction-Online/blob/master/machine_learning.ipynb#Predict-poster-gender) given the response text, in an attempt to simplify the last task. The baseline here was about 62%. However, using the same algorithm, I only achieved about 65% accuracy. Below is the confusion matrix.
 
 ![png](images/predict_poster_cm.png)
+
+Identifying gender based on text alone seems like a very difficult task, especially when we are trying to predict the gender of the person the responder is responding to.
 
 ## Conclusion
 
 ### Difficulties
 Something that I had wanted to analyze but didn't get around to was looking at compliments. I had initially included in my hypothesis that women would give and receive more compliments, but this seemed more difficult to analyze. For example, one way that I could think of analyzing this is to physically annotate occurrences of compliments, and then examine what genders and giving and receiving these compliments. This would take a very long time though, and I didn't get into it for my analysis.
 
-I also wish that my machine learning results were more significant. Predicting gender seems to be a difficult task, but I wished there would have been more prominent results. To go along with this, I would have liked to further examine the most informative features
+Another difficulty I faced was the analysis of question use. It was hard to come up with questions that would be used in an "avoiding the role of expert" context. Thus, my list of question words was very short and results were insignificant. I included were "do you?", "don't you?", "aren't there?", and "isn't it?". Some p-values seemed to be low enough, but the questions were present so infrequently (less than 0.1%) that I made the decision to not count any of them as significant. To more formally do this, annotation would again make more sense.
+
+I also wish that my machine learning results were more significant. Something that I struggled with was adding other features. I [used hstack](https://nbviewer.jupyter.org/github/Data-Science-for-Linguists-2019/Gendered-Interaction-Online/blob/master/machine_learning.ipynb#Try-adding-other-features) to try to add features for text length, but my accuracy score actually ended up being lower than the baseline. Predicting gender seems to be a difficult task, but I wish there would have been more prominent results.
 
 ### End Results
 
