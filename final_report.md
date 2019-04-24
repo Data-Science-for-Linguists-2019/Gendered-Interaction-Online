@@ -36,28 +36,30 @@ Coates' litearture allowed me to formulate a more specific hypothesis regarding 
 I also would have liked to hypothesize about women giving and receiving more compliments, but this seemed more difficult to analyze. For example, one way that I could think of analyzing this is to physically annotate occurrences of compliments, and then examine what genders and giving and receiving these compliments. This would take a very long time though, and I didn't get into it for my analysis.
 
 ## Analysis
+An important question to ask is whether the poster's gender is visible to the responder, as that is necessary for this analysis. For the two Facebook files, since the posts are from known people, the gender is known and available to the responders. For Fitocracy, I examined the setup of the website, and discovered that the gender is visible on the person's profile. This could be potentially problematic (since it isn't directly visible on the post), but many users also have pictures of themselves so gender can be inferred from the pictures, as well as clicking on the user's profile. For Reddit, I made sure to filter for "op_gender_visible," meaning the responder is able to see the poster's gender.
 
 ### Overview
 I started with some basic analysis (located [here](https://nbviewer.jupyter.org/github/Data-Science-for-Linguists-2019/Gendered-Interaction-Online/blob/master/main_analysis.ipynb#Conduct-basic-analysis)) of each file so I could better understand what I was working with. One important thing to note is the gender distributions, as this is very important to my analysis. Fitocracy was the only file that this was close to being an equal distribution. Facebook Congress, Reddit, and TED were very male dominated, whereas Facebook Wiki was more female dominated.
 
-Something interesting to note is how male-dominated Reddit actually is. Out of 98 subreddits, only five (BigBrother, awww, counting, relationships, and rupaulsdragrace) had more female posters than male posters. Below is a graph of the first 20 subreddits to get an idea of how many more male posters there are (look at AskMen and AskReddit especially!).
+Something interesting to note is how male-dominated Reddit actually is. Out of 98 subreddits, only five (BigBrother, awww, counting, relationships, and rupaulsdragrace) had more female posters than male posters. Below is a graph of the first 20 subreddits to get an idea of how many more male posters there are, normalized for total number of posts in the subreddit.
 
-![png](images/subreddits.png)
+![png](images/subreddits_normalized.png)
 
 ### Linguistic Analysis by Gender
 I then moved onto some linguistic analysis, located [here](https://nbviewer.jupyter.org/github/Data-Science-for-Linguists-2019/Gendered-Interaction-Online/blob/master/main_analysis.ipynb#Conduct-linguistic-analysis). This is again broken up into the separate data source files. However, before conducting analysis, I reduced the sizes of the files down to 50,000, as some of them were huge and would take a very large amount of time to do something like word tokenization. For my linguistic analysis, I calculated text length, average sentence length, and average Google k-band. I also used t-tests to determine the significance of these differences by gender.
 
-The analysis of the TED file was never significant, so I'm not going to discuss it here. However, overall, it seems that female posters and responders had longer posts/responses, as well as longer sentences. This was especially prominent in Facebook Congress, Fitocracy, and Reddit. Facebook Wiki was opposite (male posters had longer posts and sentences) and TED was not significant. Also, in Fitocracy and Reddit, the responses to female posters were longer than responses to male posters.
+The analysis of the TED file was never significant, so I'm not going to discuss it here. For the rest of the files, overall, it seems that female posters and responders had longer posts/responses, as well as longer sentences. This was especially prominent in Facebook Congress, Fitocracy, and Reddit. Facebook Wiki was opposite (male posters had longer posts and sentences) and TED was not significant. Also, in Fitocracy and Reddit, the responses to female posters were longer than responses to male posters.
 
 For hedges and questions (analysis starting [here](https://nbviewer.jupyter.org/github/Data-Science-for-Linguists-2019/Gendered-Interaction-Online/blob/master/main_analysis.ipynb#Linguistic-difference-in-gender)), I created functions to search for them in the text. For hedges, I searched for "I think", "I guess", "I mean", "kind of", "I'm sure", "you know", "sort of", "perhaps", and "maybe". This is of course not an exhaustive list, but these are some common ones that people use. When conducting the analysis, female posters/responders seem to dominate once again, but it's less prominent. Female posters use more hedges in Facebook Congress and Reddit, and female responders use more hedges in Reddit as well. Male posters only use more hedges in Facebook Wiki, and there was no significance for Fitocracy. Unfortunately, there was no signficance for questions in any of the files. The questions I included were "do you?", "don't you?", "aren't there?", and "isn't it?". Some p-values seemed to be low enough, but the questions were present so infrequently (less than 0.1%!) that I made the decision to not count any of them as significant. To more formally do this, annotation would again make more sense.
 
 ### Gender x Gender Analysis
-An important question to ask is whether the poster's gender is visible to the responder, as that is necessary for this analysis. For the two Facebook files, since the posts are from known people, the gender is known and available to the responders. For Fitocracy, I examined the setup of the website, and discovered that the gender is visible on the person's profile. This could be potentially problematic (since it isn't directly visible on the post), but many users also have pictures of themselves so gender can be inferred from the pictures, as well as clicking on the user's profile. For Reddit, I made sure to filter for "op_gender_visible," meaning the responder is able to see the poster's gender.
+For this analysis, we can only look at Fitocracy and Reddit files, because they are the only ones that we know the gender of both poster and responder.
 
-#### Fitocracy
-Response length
+When analyzing response length in Fitocracy, male responders have longer responses when responding to males than when responding to females and female responders have longer responses when responding to females than when responding to males. See the below boxplot:
 
 ![png](images/fit_response_length_bygender.png)
+
+Reddit is somewhat the opposite, as this time male responders have longer responses when responding to females than when responding to males.
 
 Response sentence length
 
