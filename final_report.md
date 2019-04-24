@@ -56,26 +56,33 @@ An important question to ask is whether the poster's gender is visible to the re
 
 #### Fitocracy
 Response length
+
 ![png](images/fit_response_length_bygender.png)
 
 Response sentence length
+
 ![png](images/fit_response_slen_bygender.png)
 
 #### Reddit
 Response length
+
 ![png](images/reddit_response_length_bygender.png)
 
 Response sentence length
+
 ![png](images/reddit_response_slen_bygender.png)
 
 ### Machine Learning
 Predict gender
+
 ![png](images/predict_1gender_cm.png)
 
 Predict both genders
+
 ![png](images/predict_2genders_cm.png)
 
 Predict poster's gender
+
 ![png](images/predict_poster_cm.png)
 
 ## Conclusion
