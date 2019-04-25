@@ -7,7 +7,7 @@ By: Katie Thomas (kdt13@pitt.edu)
 Date: 4/26/19
 
 ## Brief Project Summary
-How do people communicate with each other? How much does gender affect the way we present ourselves online? There are many stereotypes about male vs. female, and this can manifest in how we interact. In this project, I will examine the interaction between different genders in online postings from a sociolinguistics points of view. The data set comes from a study at Stanford University [here](https://nlp.stanford.edu/robvoigt/rtgender/), but will be modified by me to fit the needs of the project as I progress.
+How do people communicate with each other? How much does gender affect the way we present ourselves online? There are many stereotypes about male vs. female, and this can manifest in how we interact. In this project, I will examine the interaction between different genders in online postings from a sociolinguistics point of view. The data set comes from a study at Stanford University [here](https://nlp.stanford.edu/robvoigt/rtgender/), but will be modified by me to fit the needs of the project as I progress.
 
 ## Directory
 - [License](LICENSE.md): license for my project
