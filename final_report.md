@@ -27,7 +27,7 @@ These files were composed of Reddit posts and responses from a variety of subred
 This file only contains responses, as it was taken from responses to TED talks. Since these are videos, there was no post text. This time, the gender of the speaker was known, but not the gender of the responder. There was no merging necessary with this file, as there is a singular response file.
 
 ## Hypothesis
-Coates' litearture allowed me to formulate a more specific hypothesis regarding my data:
+Coates' literature allowed me to formulate a more specific hypothesis regarding my data:
 
 1. Responders "favor" their own gender. I was unsure of the specifics of this, since it's very vague, but I thought there would be a notable difference in how female responders responded to other females vs. males, and in how male responders responded to other males vs. females.
 2. Women use more hedges than men.
